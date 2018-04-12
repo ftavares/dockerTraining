@@ -41,7 +41,7 @@ Parameter     | Short         | Description |
 ### Example
 
 ```bash
-    > docker run -d --name webapi1 -p 5001:3000 nodeapi
+    > docker run -d --name webapi -p 5001:3000 nodeapi
 ```
 
 ---

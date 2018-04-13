@@ -1,0 +1,11 @@
+FROM node:carbon as built
+WORKDIR /usr/src/app
+RUN npm i -g @angular/cli --unsafe
+COPY package.json package.json
+RUN npm install --silent
+COPY . .
+RUN ng build --prod --build-optimizer
+
+FROM nginx:alpine
+COPY --from=built /usr/src/app/dist /usr/share/nginx/html
+CMD [ "nginx", "-g", "daemon off;" ]

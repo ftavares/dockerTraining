@@ -12,9 +12,7 @@ export class AppComponent {
 
 constructor(private service: UserService) {
 
-  service.getUserInfo().toPromise().then(data => {
-    console.log(data);
-  });
+
 
 }
 

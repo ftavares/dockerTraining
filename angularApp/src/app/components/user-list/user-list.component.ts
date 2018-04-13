@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import {UserService } from '../../services/user.service';
+import { UserModel } from '../../models/usermodel';
+
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserListComponent implements OnInit {
 
-  constructor() { }
+  public userList: UserModel [];
+
+  constructor(private service: UserService) {
+
+  }
 
   ngOnInit() {
+    this.service.getUsers().toPromise().then(data => {
+      this.userList = data;
+    });
   }
 
 }

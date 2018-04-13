@@ -1,3 +1,41 @@
-<p>
-  user-tile works!
-</p>
+<div *ngIf="user!==undefined" class="tileWrapper">
+  <div class="row">
+    <div class="labelValue">
+      First Name : 
+    </div>
+    <div class="inputValue">
+      {{user.firstName}}
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="labelValue">
+      Last Name :
+    </div>
+    <div class="inputValue">
+      {{user.lastName}}
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="labelValue">
+      Username :
+    </div>
+    <div class="inputValue">
+      {{user.username}}
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="labelValue">
+      Email :
+    </div>
+    <div class="inputValue">
+      {{user.email}}
+    </div>
+  </div>
+
+</div>

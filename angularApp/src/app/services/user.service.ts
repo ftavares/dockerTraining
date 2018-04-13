@@ -17,4 +17,8 @@ export class UserService {
     return this.http.get<UserModel>(`${this.apiUrl}/user`);
   }
 
+  public getUsers(): Observable<UserModel[]> {
+    return this.http.get<UserModel[]>(`${this.apiUrl}/users/25`);
+  }
+
 }

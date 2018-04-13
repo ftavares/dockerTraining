@@ -17,7 +17,8 @@ Parameter     | Short         | Description |
 ### Example
 
 ```bash
-    > docker build -t nodeapi .
+    > docker build -t nodeapi    .
+    > docker build -t angularapp .
 ```
 
 ---
@@ -41,7 +42,44 @@ Parameter     | Short         | Description |
 ### Example
 
 ```bash
-    > docker run -d --name webapi -p 5001:3000 nodeapi
+    > docker run -d --name webapi  -p 5001:3000 nodeapi
+    > docker run -d --name apptest -p 5002:80   angularapp
 ```
 
 ---
+
+## Usefull Command
+
+- Delete a Container
+
+  - If the container is running:
+
+        docker rm -f [ContainerName]
+
+        or
+
+        docker stop  [ContainerName]
+        docker rm [ContainerName]
+
+  - If the container is stopped:
+
+        docker rm [ContainerName]
+
+
+- Delete a Image
+
+  - If the image have dependented images running:
+
+        docker rmi -f [ContainerName]
+
+  - If the image doesn't have dependents images running:
+
+        docker rmi [ContainerName]
+
+- To Run The App
+
+    ```bash
+        From a bash terminal on the main directory run: ./publishAll.sh
+    ```
+
+     Navigate to [Angular App](http://localhost:5002) or [Web Api](http://localhost:5001)

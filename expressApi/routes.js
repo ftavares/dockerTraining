@@ -3,7 +3,7 @@ var faker = require("faker");
 var appRouter = function (app) {
 
   app.get("/", function (req, res) {
-    res.status(200).send({ message: 'Welcome to our restful API' });
+    res.status(200).send({ message: 'I\'m Alive and kicking!!!' });
   });
 
   app.get("/user", function (req, res) {

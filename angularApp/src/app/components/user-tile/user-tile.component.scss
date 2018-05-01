@@ -16,7 +16,6 @@
         display: flex;
         flex-direction: row;
         margin:5px;
-
         &>.labelValue
         {
             font-weight: bold;
@@ -27,12 +26,10 @@
             margin-left:5px;
             color:#58BDE7;
         }
-
     }
     &:hover {
        border: 1px solid #D9C65F;
     }
-
 }
 
 :host

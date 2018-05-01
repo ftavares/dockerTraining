@@ -65,16 +65,15 @@ Parameter     | Short         | Description |
 
         docker rm [ContainerName]
 
-
 - Delete a Image
 
   - If the image have dependented images running:
 
-        docker rmi -f [ContainerName]
+        docker rmi -f [ImageName]
 
   - If the image doesn't have dependents images running:
 
-        docker rmi [ContainerName]
+        docker rmi [ImageName]
 
 - To Run The App
 

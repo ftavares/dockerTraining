@@ -1,5 +1,6 @@
 FROM node:carbon as built
 WORKDIR /usr/src/app
+RUN apt-get install libstdc++6
 RUN npm i -g @angular/cli --unsafe
 COPY package.json package.json
 RUN npm install --silent

@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 filename="publish.sh"
 
 for D in *; do
